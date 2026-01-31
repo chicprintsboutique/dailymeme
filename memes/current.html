@@ -21,14 +21,20 @@
 </head>
 <body>
   <img id="meme" src="">
+
   <script>
     const memeCount = 270;
     const startDate = new Date("2026-01-29");
     const today = new Date();
+
     const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
     const memeNumber = (diffDays % memeCount) + 1;
+
     const memeFile = `meme${String(memeNumber).padStart(3, '0')}.jpg`;
-    document.getElementById("meme").src = memeFile;
+
+    // 🔥 FIXED PATH
+    document.getElementById("meme").src = "/dailymeme/" + memeFile;
   </script>
 </body>
 </html>
+
