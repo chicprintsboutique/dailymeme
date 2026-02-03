@@ -3,6 +3,16 @@
 <head>
   <title>Today's Meme</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M46RBHYKLX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M46RBHYKLX');
+  </script>
+
   <style>
     body {
       display: flex;
@@ -19,6 +29,7 @@
     }
   </style>
 </head>
+
 <body>
   <img id="meme" src="">
 
@@ -32,9 +43,9 @@
 
     const memeFile = `meme${String(memeNumber).padStart(3, '0')}.jpg`;
 
-    // 🔥 FIXED PATH
     document.getElementById("meme").src = "/dailymeme/" + memeFile;
   </script>
 </body>
 </html>
+
 
